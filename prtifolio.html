@@ -1,0 +1,419 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Personal Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1120;
+    color: #e5e7eb;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #111827;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+#menu-btn {
+    display: none;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* GENERAL */
+section {
+    padding: 80px 8%;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+h2 span,
+.hero h1 span {
+    color: #38bdf8;
+}
+
+/* HOME */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.small-title {
+    color: #38bdf8;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 15px 0;
+}
+
+.hero h3 {
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #9ca3af;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #38bdf8;
+    box-shadow: 0 0 30px rgba(56,189,248,0.2);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #38bdf8;
+    color: #0b1120;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #0ea5e9;
+}
+
+/* ABOUT */
+.about-text {
+    max-width: 750px;
+    color: #9ca3af;
+}
+
+/* SKILLS & PROJECTS */
+.skills-container,
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #111827;
+    padding: 25px;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+.card h3 {
+    color: #38bdf8;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+/* CONTACT */
+.contact p {
+    color: #9ca3af;
+    margin: 10px 0;
+}
+
+.contact a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #111827;
+    color: #9ca3af;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    header {
+        padding: 18px 5%;
+    }
+
+    #menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #111827;
+        padding: 20px;
+    }
+
+    nav.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 12px 0;
+    }
+
+    section {
+        padding: 65px 6%;
+    }
+
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .profile-picture {
+        width: 220px;
+        height: 220px;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <div class="logo">MyPortfolio.</div>
+
+    <button id="menu-btn" aria-label="Open menu">☰</button>
+
+    <nav id="nav-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="hero-text">
+            <p class="small-title">WELCOME TO MY PORTFOLIO</p>
+
+            <h1>Hello, I'm <span>Mr.NSHIMIYIMANA Samuel</span></h1>
+
+            <h3>IT Student | Aspiring IT Professional</h3>
+
+            <p>
+                I am passionate about technology, programming,
+                problem-solving, and building digital solutions.
+                I am continuously learning and improving my skills
+                to become a professional in the IT field.
+            </p>
+
+            <a href="#projects" class="btn">View My Projects</a>
+        </div>
+
+        <!-- PROFILE PHOTO -->
+        <img src="my pic.png"
+             alt="My Profile Picture"
+             class="profile-picture">
+
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About <span>Me</span></h2>
+
+    <p class="about-text">
+        I am an Information Technology student interested in
+        technology, innovation, and problem-solving.
+
+        I enjoy learning how computer systems work, creating
+        websites, solving technical problems, and developing
+        projects that can help people in their daily lives.
+
+        My goal is to become a skilled IT professional and
+        contribute to the development of useful technological
+        solutions.
+    </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2>My <span>Skills</span></h2>
+
+    <div class="skills-container">
+
+        <div class="card">
+            <h3>HTML</h3>
+            <p>Creating and structuring web pages.</p>
+        </div>
+
+        <div class="card">
+            <h3>CSS</h3>
+            <p>Designing and styling modern websites.</p>
+        </div>
+
+        <div class="card">
+            <h3>JavaScript</h3>
+            <p>Adding functionality and interactivity to websites.</p>
+        </div>
+
+        <div class="card">
+            <h3>IT Support</h3>
+            <p>Basic computer troubleshooting and technical support.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>My <span>Projects</span></h2>
+
+    <div class="projects-container">
+
+        <div class="card">
+            <h3>Hospital Appointment System</h3>
+            <p>
+                A system designed to help patients book appointments
+                and improve hospital services.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Personal Portfolio</h3>
+            <p>
+                My personal website introducing my skills,
+                education, and projects.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Student Management System</h3>
+            <p>
+                A project for managing student information
+                and academic records.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <h2>Contact <span>Me</span></h2>
+
+    <p>Feel free to contact me for collaboration or opportunities.</p>
+
+    <p>Email:
+        <a href="mailto:nshimiyimanasamuel262@gmail.com">nshimiyimanasamuel262@gmail.com</a>
+    </p>
+
+    <p>GitHub:
+        <a href="https://github.com/" target="_blank">shimiyimanasamuel</a>
+    </p>
+    <p>Phone:+250 795625427</p>
+
+    <p>Location: Rwanda</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Your Name. All rights reserved.</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+const menuBtn = document.getElementById("menu-btn");
+const navMenu = document.getElementById("nav-menu");
+
+menuBtn.addEventListener("click", function() {
+    navMenu.classList.toggle("active");
+});
+
+document.querySelectorAll("#nav-menu a").forEach(function(link) {
+    link.addEventListener("click", function() {
+        navMenu.classList.remove("active");
+    });
+});
+</script>
+
+</body>
+</html>
+```
