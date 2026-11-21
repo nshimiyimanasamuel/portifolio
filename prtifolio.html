@@ -4,201 +4,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <meta name="description" content="Personal portfolio of Nshimiyimana Samuel, an IT student and aspiring web developer.">
 <meta name="author" content="Nshimiyimana Samuel">
-<meta name="theme-color" content="#080d1a">
+<meta name="theme-color" content="#ffffff">
 
 <title>Nshimiyimana Samuel | IT Portfolio</title>
 
 <style>
-    
-/* =================================
-   SAVID PORTFOLIO - LIGHT THEME
-================================= */
-
 :root {
-    --bg: #f8fafc;
-    --bg-light: #f1f5f9;
+    --bg: #ffffff;
+    --bg-light: #f8fafc;
     --card: #ffffff;
     --primary: #0284c7;
     --secondary: #6366f1;
     --text: #172033;
     --muted: #64748b;
     --border: #e2e8f0;
-}
-
-/* MAIN BACKGROUND */
-body {
-    background: #f8fafc;
-    color: #172033;
-}
-
-/* NAVIGATION */
-header {
-    background: rgba(255,255,255,0.96);
-    border-bottom: 1px solid #e2e8f0;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-}
-
-nav a {
-    color: #475569;
-}
-
-nav a:hover {
-    color: #0284c7;
-}
-
-.menu-btn {
-    color: #172033;
-}
-
-/* HERO */
-.hero {
-    background:
-        radial-gradient(circle at 80% 40%, rgba(56,189,248,0.12), transparent 35%),
-        linear-gradient(135deg, #ffffff, #f1f5f9);
-}
-
-.hero h3 {
-    color: #334155;
-}
-
-.hero p,
-.about-text,
-.contact-item {
-    color: #64748b;
-}
-
-/* PROFILE */
-.profile-picture {
-    border-color: #0284c7;
-    box-shadow: 0 0 35px rgba(2,132,199,0.15);
-}
-
-/* ABOUT AND CARDS */
-.info-card,
-.skill-card,
-.education-card,
-.project-card,
-.service-card,
-.contact-box {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 5px 20px rgba(15,23,42,0.04);
-}
-
-.info-item {
-    border-bottom-color: #e2e8f0;
-}
-
-.info-item strong {
-    color: #0284c7;
-}
-
-/* TITLES AND TEXT */
-.section-title h2 {
-    color: #172033;
-}
-
-.section-title p,
-.skill-card p,
-.project-content p,
-.service-card p,
-.education-card p,
-.contact-box > p {
-    color: #64748b;
-}
-
-/* PROJECT IMAGES */
-.project-image {
-    background: linear-gradient(135deg, #e0f2fe, #dbeafe);
-}
-
-.savid-image {
-    background: linear-gradient(135deg, #ccfbf1, #dbeafe);
-}
-
-/* PROJECT TAGS */
-.project-tags span {
-    background: #e0f2fe;
-    color: #0369a1;
-}
-
-/* BUTTONS */
-.btn-primary {
-    background: #0284c7;
-    color: #ffffff;
-}
-
-.btn-primary:hover {
-    background: #0369a1;
-}
-
-.btn-outline {
-    border-color: #0284c7;
-    color: #0284c7;
-}
-
-.btn-outline:hover {
-    background: #e0f2fe;
-}
-
-/* SKILLS AND SERVICES */
-.skill-card:hover,
-.project-card:hover {
-    border-color: #0284c7;
-    box-shadow: 0 10px 25px rgba(2,132,199,0.08);
-}
-
-.skill-card h3,
-.service-card h3,
-.project-content h3,
-.education-card h3 {
-    color: #0284c7;
-}
-
-/* CONTACT */
-.contact-item a,
-.social-links a,
-.project-link {
-    color: #0284c7;
-}
-
-.social-links a {
-    border-color: #cbd5e1;
-}
-
-.social-links a:hover {
-    background: #0284c7;
-    color: #ffffff;
-}
-
-/* FOOTER */
-footer {
-    background: #eaf0f6;
-    border-top: 1px solid #e2e8f0;
-    color: #64748b;
-}
-
-/* MOBILE MENU */
-@media (max-width: 700px) {
-    nav {
-        background: #ffffff;
-        border-bottom: 1px solid #e2e8f0;
-        box-shadow: 0 8px 15px rgba(0,0,0,0.05);
-    }
-}
-
-:root {
-    --bg: #080d1a;
-    --bg-light: #101a2d;
-    --card: #111d32;
-    --primary: #38bdf8;
-    --secondary: #818cf8;
-    --text: #f1f5f9;
-    --muted: #a1acc0;
-    --border: rgba(148,163,184,0.15);
 }
 
 * {
@@ -227,7 +48,7 @@ a {
 }
 
 section {
-    padding: 95px 0;
+    padding: 90px 0;
     scroll-margin-top: 75px;
 }
 
@@ -241,7 +62,8 @@ section {
     margin-bottom: 10px;
 }
 
-.section-title h2 span {
+.section-title h2 span,
+.highlight {
     color: var(--primary);
 }
 
@@ -249,19 +71,16 @@ section {
     color: var(--muted);
 }
 
-.highlight {
-    color: var(--primary);
-}
-
-/* NAVBAR */
+/* NAVIGATION */
 
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(8,13,26,0.94);
+    background: rgba(255,255,255,0.96);
     backdrop-filter: blur(15px);
     border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
 }
 
 .navbar {
@@ -275,6 +94,7 @@ header {
     font-size: 25px;
     font-weight: bold;
     letter-spacing: 1px;
+    color: var(--text);
 }
 
 .logo span {
@@ -284,11 +104,11 @@ header {
 nav {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 28px;
 }
 
 nav a {
-    color: var(--muted);
+    color: #475569;
     font-size: 14px;
     transition: 0.3s;
 }
@@ -301,7 +121,7 @@ nav a:hover {
     display: none;
     border: none;
     background: none;
-    color: white;
+    color: var(--text);
     font-size: 28px;
     cursor: pointer;
 }
@@ -313,8 +133,8 @@ nav a:hover {
     display: flex;
     align-items: center;
     background:
-        radial-gradient(circle at 80% 40%, rgba(56,189,248,0.10), transparent 35%),
-        radial-gradient(circle at 15% 80%, rgba(129,140,248,0.08), transparent 30%);
+        radial-gradient(circle at 80% 40%, rgba(56,189,248,0.12), transparent 35%),
+        linear-gradient(135deg, #ffffff, #f1f5f9);
 }
 
 .hero-content {
@@ -340,7 +160,7 @@ nav a:hover {
 
 .hero h3 {
     font-size: 21px;
-    color: #cbd5e1;
+    color: #334155;
     margin-bottom: 18px;
 }
 
@@ -367,11 +187,11 @@ nav a:hover {
 
 .btn-primary {
     background: var(--primary);
-    color: #06111e;
+    color: #ffffff;
 }
 
 .btn-primary:hover {
-    background: #7dd3fc;
+    background: #0369a1;
     transform: translateY(-3px);
 }
 
@@ -381,14 +201,13 @@ nav a:hover {
 }
 
 .btn-outline:hover {
-    background: rgba(56,189,248,0.1);
+    background: #e0f2fe;
     transform: translateY(-3px);
 }
 
 .profile-wrapper {
     display: flex;
     justify-content: center;
-    position: relative;
 }
 
 .profile-picture {
@@ -397,7 +216,7 @@ nav a:hover {
     object-fit: cover;
     border-radius: 50%;
     border: 4px solid var(--primary);
-    box-shadow: 0 0 45px rgba(56,189,248,0.18);
+    box-shadow: 0 0 35px rgba(2,132,199,0.15);
 }
 
 /* ABOUT */
@@ -422,6 +241,7 @@ nav a:hover {
     border: 1px solid var(--border);
     border-radius: 14px;
     padding: 30px;
+    box-shadow: 0 5px 20px rgba(15,23,42,0.04);
 }
 
 .info-item {
@@ -454,6 +274,7 @@ nav a:hover {
     padding: 28px 20px;
     text-align: center;
     transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(15,23,42,0.04);
 }
 
 .skill-card:hover {
@@ -486,6 +307,7 @@ nav a:hover {
     border: 1px solid var(--border);
     border-left: 4px solid var(--primary);
     border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(15,23,42,0.04);
 }
 
 .education-card h3 {
@@ -511,11 +333,13 @@ nav a:hover {
     border-radius: 14px;
     overflow: hidden;
     transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(15,23,42,0.04);
 }
 
 .project-card:hover {
     transform: translateY(-6px);
     border-color: var(--primary);
+    box-shadow: 0 10px 25px rgba(2,132,199,0.08);
 }
 
 .project-image {
@@ -524,11 +348,14 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     font-size: 65px;
-    background: linear-gradient(135deg, #132b47, #172554);
+    background: linear-gradient(135deg, #e0f2fe, #dbeafe);
 }
 
 .savid-image {
-    background: linear-gradient(135deg, #0f766e, #172554);
+    background: linear-gradient(135deg, #ccfbf1, #dbeafe);
+    color: #0369a1;
+    font-weight: bold;
+    font-size: 75px;
 }
 
 .project-content {
@@ -558,8 +385,8 @@ nav a:hover {
     font-size: 11px;
     padding: 5px 10px;
     border-radius: 20px;
-    background: rgba(56,189,248,0.1);
-    color: var(--primary);
+    background: #e0f2fe;
+    color: #0369a1;
 }
 
 .project-link {
@@ -586,6 +413,13 @@ nav a:hover {
     border-radius: 12px;
     padding: 28px;
     text-align: center;
+    box-shadow: 0 5px 20px rgba(15,23,42,0.04);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
 }
 
 .service-card h3 {
@@ -608,6 +442,7 @@ nav a:hover {
     border: 1px solid var(--border);
     border-radius: 15px;
     padding: 40px;
+    box-shadow: 0 5px 20px rgba(15,23,42,0.04);
 }
 
 .contact-box > p {
@@ -639,7 +474,7 @@ nav a:hover {
 
 .social-links a {
     padding: 9px 17px;
-    border: 1px solid var(--border);
+    border: 1px solid #cbd5e1;
     border-radius: 6px;
     color: var(--primary);
     transition: 0.3s;
@@ -647,7 +482,7 @@ nav a:hover {
 
 .social-links a:hover {
     background: var(--primary);
-    color: var(--bg);
+    color: #ffffff;
 }
 
 /* FOOTER */
@@ -655,15 +490,16 @@ nav a:hover {
 footer {
     text-align: center;
     padding: 25px;
-    background: #060a13;
+    background: #eaf0f6;
     border-top: 1px solid var(--border);
     color: var(--muted);
     font-size: 13px;
 }
 
-/* RESPONSIVE */
+/* MOBILE RESPONSIVENESS */
 
 @media (max-width: 900px) {
+
     .container {
         width: 90%;
     }
@@ -687,6 +523,7 @@ footer {
 }
 
 @media (max-width: 700px) {
+
     .navbar {
         height: 68px;
     }
@@ -702,11 +539,12 @@ footer {
         left: 0;
         width: 100%;
         padding: 20px 6%;
-        background: #101a2d;
+        background: #ffffff;
         flex-direction: column;
         align-items: flex-start;
         gap: 18px;
         border-bottom: 1px solid var(--border);
+        box-shadow: 0 8px 15px rgba(0,0,0,0.05);
     }
 
     nav.active {
@@ -766,9 +604,11 @@ footer {
 }
 
 @media (max-width: 400px) {
+
     .skills-grid {
         grid-template-columns: 1fr;
     }
+
 }
 </style>
 </head>
@@ -827,6 +667,7 @@ footer {
             </p>
 
             <div class="hero-buttons">
+
                 <a href="#projects" class="btn btn-primary">
                     Explore My Projects
                 </a>
@@ -834,15 +675,18 @@ footer {
                 <a href="#contact" class="btn btn-outline">
                     Contact Me
                 </a>
+
             </div>
 
         </div>
 
         <div class="profile-wrapper">
+
             <img
                 src="my pic.png"
                 alt="Nshimiyimana Samuel"
                 class="profile-picture">
+
         </div>
 
     </div>
@@ -993,7 +837,7 @@ footer {
 
         <div class="section-title">
             <h2>My <span>Projects</span></h2>
-            <p>Some of the projects I have worked on or am developing</p>
+            <p>Some projects I have worked on or am developing</p>
         </div>
 
         <div class="projects-grid">
@@ -1199,8 +1043,7 @@ footer {
                     WhatsApp
                 </a>
 
-                <a
-                    href="mailto:nshimiyimanasamuel262@gmail.com">
+                <a href="mailto:nshimiyimanasamuel262@gmail.com">
                     Email Me
                 </a>
 
@@ -1214,20 +1057,24 @@ footer {
 
 <!-- FOOTER -->
 <footer>
+
     <p>
         © <span id="year"></span> Nshimiyimana Samuel.
         All Rights Reserved.
     </p>
+
     <p>Designed and developed by Samuel.</p>
+
 </footer>
 
+<!-- JAVASCRIPT -->
 <script>
 
 // MOBILE NAVIGATION
 const menuBtn = document.getElementById("menu-btn");
 const navMenu = document.getElementById("nav-menu");
 
-menuBtn.addEventListener("click", function () {
+menuBtn.addEventListener("click", function() {
 
     const isOpen = navMenu.classList.toggle("active");
 
